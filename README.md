@@ -21,11 +21,10 @@ The data raw folder contains the raw data files as extracted from the data sourc
     2. GeoJSON Exports folder - this is the exported folder from data source 1. It is far to large to upload to github.
 
 2. data_intermediate: <br>
-The data_intermediate folder contains intermediary csv files that were used in the process of creating the finalized data file which is stored in data_final.
-    1. `us_cities_revid.csv` : This file is an intermediary output from `src\step_one_ores_ranking.ipynb`. It is the combined data from `us_cities_by_state_SEPT.2023.csv` and the revision id data pulled from the wikipedia api.
-    2. `us_cities_score_failures.csv` : Temporary file used to store article names that failed in ORES api call (empty because all succeeded)
-    3. `us_cities_score.csv` : unsorted raw output merged from ORES and data sources
-    4. `us_cities_score_sorted.csv` : sorted output from ORES of the ~20,000 city articles.
+The data_intermediate folder contains intermediary csv files that were used in the process of creating the visualizations.
+   1. avg_aqi_per_year.csv - contains the aggregated aqi per year from the EPA api
+   2. distances.csv - a csv file containing the distances for each of the fires in from the Combined Wildfire dataset.
+   3. smoke_estimate.csv - a csv file that contains the smoke estimates computed based on the Combined Wildfire dataset in data source 1
 
 ### Code
 The three primary notebooks are stored under the `notebooks` folder. The extraction and analysis was broken up into three separate notebooks:
